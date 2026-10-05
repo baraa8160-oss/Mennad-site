@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الانتخابات البلدية قجال | نوري عنقاق</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,Tahoma,sans-serif;
+}
+
+body{
+  background:#f5f7f9;
+  color:#17202a;
+  line-height:1.8;
+}
+
+header{
+  background:linear-gradient(135deg,#063b2a,#087443);
+  color:white;
+  padding:22px 16px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+header h1{
+  font-size:25px;
+}
+
+header p{
+  opacity:.9;
+}
+
+nav{
+  margin-top:12px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 7px;
+  font-size:14px;
+}
+
+.hero{
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:50px 20px;
+  background:
+    linear-gradient(rgba(0,45,32,.82),rgba(0,45,32,.82)),
+    linear-gradient(135deg,#0a7650,#063b2a);
+  color:white;
+}
+
+.hero-content{
+  max-width:800px;
+}
+
+.badge{
+  display:inline-block;
+  background:#d7b54a;
+  color:#17202a;
+  padding:7px 18px;
+  border-radius:30px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.hero h2{
+  font-size:48px;
+  margin-bottom:8px;
+}
+
+.hero h3{
+  font-size:30px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:19px;
+  max-width:650px;
+  margin:auto;
+}
+
+.buttons{
+  margin-top:30px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 25px;
+  margin:5px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.btn-main{
+  background:#d7b54a;
+  color:#17202a;
+}
+
+.btn-light{
+  border:2px solid white;
+  color:white;
+}
+
+section{
+  padding:65px 18px;
+}
+
+.container{
+  max-width:1050px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  font-size:31px;
+  color:#075c3e;
+}
+
+.section-title p{
+  color:#666;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.card h3{
+  color:#075c3e;
+  margin-bottom:10px;
+}
+
+.number{
+  width:45px;
+  height:45px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#075c3e;
+  color:white;
+  border-radius:50%;
+  margin-bottom:15px;
+  font-weight:bold;
+}
+
+.candidate{
+  background:white;
+}
+
+.candidate-box{
+  display:grid;
+  grid-template-columns:280px 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.photo{
+  height:330px;
+  border-radius:20px;
+  background:#e9eeee;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#777;
+  text-align:center;
+  overflow:hidden;
+}
+
+.photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
+
+.candidate h2{
+  font-size:36px;
+  color:#075c3e;
+  margin-bottom:15px;
+}
+
+.program{
+  background:#eef5f1;
+}
+
+.join{
+  background:linear-gradient(135deg,#063b2a,#087443);
+  color:white;
+  text-align:center;
+}
+
+.join h2{
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.contact{
+  background:white;
+}
+
+.contact-links{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+form{
+  max-width:600px;
+  margin:auto;
+}
+
+input,textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:14px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  font-size:16px;
+}
+
+textarea{
+  height:130px;
+  resize:none;
+}
+
+button{
+  width:100%;
+  padding:15px;
+  border:0;
+  border-radius:30px;
+  background:#075c3e;
+  color:white;
+  font-size:17px;
+  cursor:pointer;
+}
+
+footer{
+  background:#09251c;
+  color:white;
+  text-align:center;
+  padding:25px 15px;
+}
+
+@media(max-width:700px){
+
+  .hero{
+    min-height:570px;
+  }
+
+  .hero h2{
+    font-size:36px;
+  }
+
+  .hero h3{
+    font-size:25px;
+  }
+
+  .candidate-box{
+    grid-template-columns:1fr;
+  }
+
+  .photo{
+    max-width:280px;
+    margin:auto;
+  }
+
+  nav a{
+    font-size:12px;
+    margin:3px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>الانتخابات البلدية – قجال</h1>
+<p>حملة المترشح نوري عنقاق</p>
+
+<nav>
+<a href="#home">الرئيسية</a>
+<a href="#candidate">المترشح</a>
+<a href="#program">البرنامج</a>
+<a href="#contact">تواصل معنا</a>
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<span class="badge">الانتخابات البلدية</span>
+
+<h2>قجال</h2>
+
+<h3>نوري عنقاق</h3>
+
+<p>
+معًا من أجل رؤية واضحة، عمل ميداني، وإصغاء حقيقي لانشغالات سكان قجال.
+</p>
+
+<div class="buttons">
+
+<a href="#program" class="btn btn-main">
+اكتشف البرنامج
+</a>
+
+<a href="#contact" class="btn btn-light">
+تواصل معنا
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="candidate" id="candidate">
+
+<div class="container">
+
+<div class="section-title">
+<h2>عن المترشح</h2>
+<p>تعرف على نوري عنقاق</p>
+</div>
+
+<div class="candidate-box">
+
+<div class="photo">
+<img src="assets/nouri-ankaq.jpg" alt="صورة المترشح نوري عنقاق" width="357" height="430" loading="lazy" decoding="async">
+</div>
+
+<div>
+<h2>نوري عنقاق</h2>
+
+<p>
+مرشح للانتخابات البلدية في قجال، يطرح رؤية ترتكز على العمل الميداني،
+الاستماع إلى المواطنين، وتحسين الخدمات المحلية.
+</p>
+
+<p style="margin-top:15px;">
+الهدف هو بناء تواصل مستمر بين المواطن والبلدية ومتابعة الانشغالات
+المحلية بطريقة واضحة ومنظمة.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="program" id="program">
+
+<div class="container">
+
+<div class="section-title">
+<h2>محاور البرنامج</h2>
+<p>الأولويات المقترحة للحملة</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="number">1</div>
+<h3>النظافة والمحيط</h3>
+<p>
+الاهتمام بالنظافة وتحسين المحيط الحضري والريفي ومتابعة النقاط التي تحتاج إلى تدخل.
+</p>
+</div>
+
+<div class="card">
+<div class="number">2</div>
+<h3>الطرقات والإنارة</h3>
+<p>
+متابعة حالة الطرقات والإنارة العمومية واقتراح حلول عملية حسب الأولويات.
+</p>
+</div>
+
+<div class="card">
+<div class="number">3</div>
+<h3>الخدمات المحلية</h3>
+<p>
+تحسين التواصل مع المواطنين وتسهيل الوصول إلى المعلومات والخدمات البلدية.
+</p>
+</div>
+
+<div class="card">
+<div class="number">4</div>
+<h3>الشباب والرياضة</h3>
+<p>
+دعم الأنشطة الرياضية والثقافية وخلق فضاءات أفضل للشباب.
+</p>
+</div>
+
+<div class="card">
+<div class="number">5</div>
+<h3>التنمية المحلية</h3>
+<p>
+تشجيع المبادرات والمشاريع التي يمكن أن تساهم في تنمية المنطقة وخلق فرص اقتصادية.
+</p>
+</div>
+
+<div class="card">
+<div class="number">6</div>
+<h3>الاستماع للمواطن</h3>
+<p>
+فتح قنوات تواصل مباشرة لجمع الانشغالات ومتابعتها بشكل منظم.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>لماذا هذا الموقع؟</h2>
+<p>منصة للتواصل مع سكان قجال</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>📢 أخبار الحملة</h3>
+<p>نشر أخبار ونشاطات الحملة ومواعيد اللقاءات.</p>
+</div>
+
+<div class="card">
+<h3>💬 تواصل مباشر</h3>
+<p>إرسال الاقتراحات والانشغالات إلى فريق الحملة.</p>
+</div>
+
+<div class="card">
+<h3>📋 البرنامج</h3>
+<p>عرض المحاور والأفكار المقترحة بشكل واضح.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="join">
+
+<div class="container">
+
+<h2>شارك برأيك</h2>
+
+<p>
+صوت المواطن واقتراحاته جزء مهم من النقاش حول مستقبل البلدية.
+</p>
+
+<div class="buttons">
+
+<a href="#contact" class="btn btn-main">
+أرسل اقتراحك
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>تواصل معنا</h2>
+
+<p>
+أرسل لنا اقتراحًا أو انشغالًا يخص منطقتك
+</p>
+
+</div>
+
+<div class="contact-links">
+<a href="tel:+213665325648" class="btn btn-main" aria-label="الاتصال على الرقم 0665325648">الهاتف</a>
+<a href="https://wa.me/213665325648" class="btn btn-main" target="_blank" rel="noopener noreferrer" aria-label="التواصل عبر واتساب على الرقم 0665325648">واتساب</a>
+<a href="https://www.facebook.com/share/1DoGynatgC/" class="btn btn-main" target="_blank" rel="noopener noreferrer">فيسبوك</a>
+</div>
+
+<form name="contact" method="POST" data-netlify="true">
+
+<input type="hidden" name="form-name" value="contact">
+
+<input
+type="text"
+name="name"
+placeholder="الاسم"
+required
+>
+
+<input
+type="tel"
+name="phone"
+placeholder="رقم الهاتف"
+>
+
+<textarea
+name="message"
+placeholder="اكتب رسالتك أو اقتراحك..."
+required
+></textarea>
+
+<button type="submit">
+إرسال
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>الانتخابات البلدية – قجال</p>
+
+<p>نوري عنقاق</p>
+
+<p style="margin-top:8px;font-size:13px;">
+موقع تعريفي للحملة
+</p>
+
+<p style="margin-top:12px;font-size:12px;color:#cbd8d2;">
+تطوير وتصميم الموقع: <bdi dir="ltr">MENAD KATIB</bdi>
+</p>
+
+</footer>
+
+<script>
+const contactForm = document.querySelector('form[name="contact"]');
+
+contactForm.addEventListener('submit', function(event){
+  event.preventDefault();
+
+  if(!contactForm.reportValidity()){
+    return;
+  }
+
+  const formData = new FormData(contactForm);
+  const visitorName = formData.get('name').trim();
+  const visitorPhone = formData.get('phone').trim() || 'لم يُذكر';
+  const visitorMessage = formData.get('message').trim();
+  const whatsappMessage = `الاسم: ${visitorName}\nرقم الهاتف: ${visitorPhone}\nالرسالة:\n${visitorMessage}`;
+
+  window.location.href = `https://wa.me/213665325648?text=${encodeURIComponent(whatsappMessage)}`;
+});
+</script>
+
+</body>
+</html>
